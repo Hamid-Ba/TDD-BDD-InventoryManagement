@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F215AC8E-B752-47EE-B77D-C6F3863508AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C67AB728-A844-4A78-BAAD-340B40A6F349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Tests.E2E", "tests\Inventory.Tests.E2E\Inventory.Tests.E2E.csproj", "{12BDEE06-7011-4DBA-B7CB-F355E2784E7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12BDEE06-7011-4DBA-B7CB-F355E2784E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BDEE06-7011-4DBA-B7CB-F355E2784E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BDEE06-7011-4DBA-B7CB-F355E2784E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BDEE06-7011-4DBA-B7CB-F355E2784E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{12BDEE06-7011-4DBA-B7CB-F355E2784E7F} = {C67AB728-A844-4A78-BAAD-340B40A6F349}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43582DAD-E9DD-462C-BE42-36EA5683A7CC}
+	EndGlobalSection
+EndGlobal
