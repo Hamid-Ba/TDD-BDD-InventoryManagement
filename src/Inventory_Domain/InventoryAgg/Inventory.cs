@@ -2,9 +2,10 @@
 {
     public class Inventory
     {
-        public string Product { get; set; }
-        public int UnitPrice { get; set; }
-
+        public long Id { get; private set; }
+        public string Product { get; private set; }
+        public int UnitPrice { get; private set; }
+        public bool IsStock { get; private set; }
 
         public Inventory(string product, int unitPrice)
         {
@@ -13,15 +14,16 @@
 
             Product = product;
             UnitPrice = unitPrice;
+            IsStock = false;
         }
 
-        private void GuardAgainstInvalidProduct(string product)
+        private static void GuardAgainstInvalidProduct(string product)
         {
             if (string.IsNullOrEmpty(product))
                 throw new InvalidProductException();
         }
-        
-        private void GuardAgainstInvalidUnitPrice(int unitPrice)
+
+        private static void GuardAgainstInvalidUnitPrice(int unitPrice)
         {
             if (unitPrice <= 0)
                 throw new InvalidUnitPriceException();
