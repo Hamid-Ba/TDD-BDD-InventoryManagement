@@ -25,9 +25,20 @@
 
   <ItemGroup>
     <Folder Include="Drivers\" />
-    <Folder Include="Features\" />
     <Folder Include="Hooks\" />
-    <Folder Include="Steps\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\InventoryManagement.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\InventoryManagement.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InventoryManagement.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
 
 </Project>
