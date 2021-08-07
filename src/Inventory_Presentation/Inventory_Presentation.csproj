@@ -5,11 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Inventory_Application\Inventory_Application.csproj" />
     <ProjectReference Include="..\Inventory_Application_Contract\Inventory_Application_Contract.csproj" />
+    <ProjectReference Include="..\Inventory_Infrastructure_EfCore\Inventory_Infrastructure_EfCore.csproj" />
   </ItemGroup>
 
 </Project>

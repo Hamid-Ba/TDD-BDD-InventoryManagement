@@ -1,15 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Inventory_Application;
+using Inventory_Application_Contract.InventoryAgg;
+using Inventory_Domain.InventoryAgg;
+using Inventory_Infrastructure_EfCore.Context;
+using Inventory_Infrastructure_EfCore.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 namespace Inventory_Presentation
@@ -26,6 +25,17 @@ namespace Inventory_Presentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IInventoryApplication, InventoryApplication>();
+            services.AddTransient<IInventoryRepository, InventoryRepository>();
+
+            #region ConfigDataBase
+
+            services.AddDbContext<InventoryContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("InventoryConnection"));
+            });
+
+            #endregion
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
