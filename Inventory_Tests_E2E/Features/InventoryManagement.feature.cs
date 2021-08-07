@@ -19,14 +19,16 @@ namespace Inventory_Tests_E2E.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Inventory Management", Description="\tAs A Warehouse Keeper\r\n\tI Want To Keep Track About Products Stock\r\n\tSo That I Al" +
-        "ways Have Accurate Info Of Inventory", SourceFile="Features\\InventoryManagement.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("Inventory Management", new string[] {
+            "api"}, Description="\tAs A Warehouse Keeper\r\n\tI Want To Keep Track About Products Stock\r\n\tSo That I Al" +
+        "ways Have Accurate Info Of Inventory", SourceFile="Features\\InventoryManagement.feature", SourceLine=1)]
     public partial class InventoryManagementFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private string[] _featureTags = ((string[])(null));
+        private string[] _featureTags = new string[] {
+                "api"};
         
 #line 1 "InventoryManagement.feature"
 #line hidden
@@ -36,7 +38,8 @@ namespace Inventory_Tests_E2E.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Inventory Management", "\tAs A Warehouse Keeper\r\n\tI Want To Keep Track About Products Stock\r\n\tSo That I Al" +
-                    "ways Have Accurate Info Of Inventory", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "ways Have Accurate Info Of Inventory", ProgrammingLanguage.CSharp, new string[] {
+                        "api"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,12 +75,10 @@ namespace Inventory_Tests_E2E.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Defining A New Inventory", new string[] {
-                "api"}, SourceLine=6)]
+        [TechTalk.SpecRun.ScenarioAttribute("Defining A New Inventory", SourceLine=6)]
         public virtual void DefiningANewInventory()
         {
-            string[] tagsOfScenario = new string[] {
-                    "api"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Defining A New Inventory", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7

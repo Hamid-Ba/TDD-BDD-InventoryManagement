@@ -1,9 +1,9 @@
-﻿Feature: Inventory Management
+﻿@api
+Feature: Inventory Management
 	As A Warehouse Keeper
 	I Want To Keep Track About Products Stock
 	So That I Always Have Accurate Info Of Inventory
 
-@api
 Scenario: Defining A New Inventory
 	Given I Want To Define The Following Inventory
 	| Product | UnitPrice |
